@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CreateRoom from './CreateRoom';
 import CreateRoom2 from './CreateRoom2';
 import CalendarPage from './CalendarPage';
+import GuestInfo from './GuestInfo';
 function App() {
     return (
         <div className="App">
@@ -13,6 +14,7 @@ function App() {
                     <Route path="/CreateRoom" element={<CreateRoom />}></Route>
                     <Route path="/CreateRoom2" element={<CreateRoom2 />}></Route>
                     <Route path="/CalanderPage" element={<CalendarPage />}></Route>
+                    <Route path="/GuestInfo" element={<GuestInfo />}></Route>
                 </Routes>
             </Router>
         </div>

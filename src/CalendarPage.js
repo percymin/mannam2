@@ -4,6 +4,7 @@ import Calendar from 'react-calendar';
 import 'react-datepicker/dist/react-datepicker.css';
 import Header from './Header';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 import 'react-calendar/dist/Calendar.css';
 
 function CalendarPage() {
@@ -23,7 +24,9 @@ function CalendarPage() {
                     <Calendar onChange={setDate} value={date} />
                 </div>
                 <div className="participants-container">
-                    <button className="btn btn-success submit-btn me-3">참가하기</button>
+                    <Link to="/GuestInfo">
+                        <button className="btn btn-success submit-btn me-3">참가하기</button>
+                    </Link>
                     <button className="btn btn-success submit-btn" onClick={handleShare}>
                         공유하기
                     </button>

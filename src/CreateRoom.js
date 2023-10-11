@@ -12,6 +12,8 @@ function CreateRoom() {
             <div className="content container">
                 <input type="text" className="form-control input-box" placeholder="이름 입력" />
                 <input type="email" className="form-control input-box" placeholder="이메일 입력" />
+                <input type="phonenumber" className="form-control input-box" placeholder="전화번호 입력" />
+
                 <Link to="/CreateRoom2">
                     <button className="btn btn-success submit-btn">완료</button>
                 </Link>

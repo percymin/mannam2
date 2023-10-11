@@ -20,38 +20,6 @@ function CreateRoom2() {
             <Header />
 
             <div className="container">
-                {/* <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">
-                            Email address
-                        </label>
-                        <input
-                            type="email"
-                            class="form-control"
-                            id="exampleInputEmail1"
-                            aria-describedby="emailHelp"
-                        ></input>
-                        <div id="emailHelp" class="form-text">
-                            We'll never share your email with anyone else.
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">
-                            Password
-                        </label>
-                        <input type="password" class="form-control" id="exampleInputPassword1"></input>
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1"></input>
-                        <label class="form-check-label" for="exampleCheck1">
-                            Check me out
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">
-                        Submit
-                    </button>
-                </form> */}
-
                 <div className="form-container">
                     <label>방이름을 정해주세요</label>
                     <input
@@ -81,12 +49,14 @@ function CreateRoom2() {
                         />
                     </div>
                     <label>모임의 최대인원을 입력해주세요</label>
-                    <InputMask
-                        mask="999"
-                        placeholder="최대 인원"
-                        value={maxPeople}
-                        onChange={(e) => setMaxPeople(e.target.value)}
-                    />
+                    <select value={maxPeople} onChange={(e) => setMaxPeople(e.target.value)} className="max-people">
+                        <option value="">선택하세요</option>
+                        {Array.from({ length: 100 }, (_, i) => i + 1).map((num) => (
+                            <option key={num} value={num}>
+                                {num}
+                            </option>
+                        ))}
+                    </select>
                     <label>투표 마감시간을 정해주세요</label>
                     <DatePicker
                         selected={deadlineTime}

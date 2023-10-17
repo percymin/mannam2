@@ -11,13 +11,13 @@
     flex: 3; /* 참여자 목록 영역이 전체 너비의 30%를 차지 */
     margin-top: 20px;
     border: 1px solid #ddd; /* 경계선 추가 */
-
     padding: 20px; /* 내부 여백 추가 */
 }
 
 .participant-list {
     margin-top: 20px;
 }
+
 /* App.css */
 
 .container {

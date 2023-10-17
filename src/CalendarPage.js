@@ -6,6 +6,7 @@ import Header from './Header';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
 import 'react-calendar/dist/Calendar.css';
+import './CalandarPage.css';
 
 function CalendarPage() {
     const [date, setDate] = useState(new Date());
@@ -21,7 +22,7 @@ function CalendarPage() {
             <Header />
             <div className="container">
                 <div className="calendar-container">
-                    <Calendar onChange={setDate} value={date} />
+                    <Calendar className="calender" onChange={setDate} value={date} />
                 </div>
                 <div className="participants-container">
                     <Link to="/GuestInfo">
